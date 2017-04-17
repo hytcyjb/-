@@ -15,7 +15,8 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 
-import lenve.vitamio.R;
+import yy.yjbo.R;
+
 
 /**
  * Created by shaohui on 16/10/11.
