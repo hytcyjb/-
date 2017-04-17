@@ -1,4 +1,4 @@
-package lenve.vitamio.yutil;
+package yy.yjbo.yutil;
 
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;

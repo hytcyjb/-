@@ -1,4 +1,4 @@
-package lenve.vitamio.showdialogfragment;
+package yy.yjbo.showdialogfragment;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -7,8 +7,8 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
-import lenve.vitamio.R;
-import lenve.vitamio.yutil.BaseBottomDialog;
+import yy.yjbo.yutil.BaseBottomDialog;
+import yy.yjbo.R;
 
 /**
  * Created by shaohui on 16/10/12.

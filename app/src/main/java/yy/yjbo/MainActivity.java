@@ -13,7 +13,7 @@ import io.vov.vitamio.Vitamio;
 import io.vov.vitamio.utils.Log;
 import io.vov.vitamio.widget.MediaController;
 import io.vov.vitamio.widget.VideoView;
-import lenve.vitamio.showdialogfragment.ShowFragmentActivity;
+import yy.yjbo.showdialogfragment.ShowFragmentActivity;
 
 /**
  * Vitamio “维他蜜”视频播放

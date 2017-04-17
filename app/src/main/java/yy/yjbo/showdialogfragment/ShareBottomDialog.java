@@ -1,9 +1,9 @@
-package lenve.vitamio.showdialogfragment;
+package yy.yjbo.showdialogfragment;
 
 import android.view.View;
 
-import lenve.vitamio.R;
-import lenve.vitamio.yutil.BaseBottomDialog;
+import yy.yjbo.yutil.BaseBottomDialog;
+import yy.yjbo.R;
 
 /**
  * Created by shaohui on 16/10/11.

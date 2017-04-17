@@ -1,4 +1,4 @@
-package lenve.vitamio.showdialogfragment;
+package yy.yjbo.showdialogfragment;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -6,8 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
 
-import lenve.vitamio.R;
-import lenve.vitamio.yutil.BottomDialog;
+import yy.yjbo.yutil.BottomDialog;
+import yy.yjbo.R;
 
 /**
  * 引用：https://github.com/shaohui10086/BottomDialog.git

@@ -1,4 +1,4 @@
-package lenve.vitamio.yutil;
+package yy.yjbo.yutil;
 
 /**
  * Created by shaohui on 16/10/11.
