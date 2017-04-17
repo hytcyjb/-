@@ -1,4 +1,4 @@
-package lenve.vitamio;
+package yy.yjbo;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -15,6 +15,12 @@ import io.vov.vitamio.widget.MediaController;
 import io.vov.vitamio.widget.VideoView;
 import lenve.vitamio.showdialogfragment.ShowFragmentActivity;
 
+/**
+ * Vitamio “维他蜜”视频播放
+ * @author yjbo
+ * @time 2017/4/17 10:17
+ * @mail 1457521527@qq.com
+ */
 public class MainActivity extends AppCompatActivity {
 
     private TextView percentTv;
@@ -49,9 +55,6 @@ public class MainActivity extends AppCompatActivity {
                 public void onBufferingUpdate(MediaPlayer mp, int percent) {
                     if (!isBuf) {//如果不缓存
                         if (bufPercent == percent) {//缓存的进度总是一样；
-                            System.out.println("缓存的进度00：" + "===" + bufPercent + "===" + percent
-                                    + "=====" + bufTime + "=====" + System.currentTimeMillis()
-                                    + "=====" + (System.currentTimeMillis() - bufTime));
                             if (bufTime == 0) {
                                 System.out.println("缓存的进度01：");
                                 bufTime = System.currentTimeMillis();
