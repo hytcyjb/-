@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="lenve.vitamio.MainActivity">
+    tools:context="yy.yjbo.MainActivity">
 
     <io.vov.vitamio.widget.VideoView
         android:id="@+id/vitamio"
