@@ -1,5 +1,6 @@
 package lenve.vitamio;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,7 @@ import io.vov.vitamio.Vitamio;
 import io.vov.vitamio.utils.Log;
 import io.vov.vitamio.widget.MediaController;
 import io.vov.vitamio.widget.VideoView;
+import lenve.vitamio.showdialogfragment.ShowFragmentActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,6 +31,12 @@ public class MainActivity extends AppCompatActivity {
         percentTv = (TextView) findViewById(R.id.buffer_percent);
         //显示下载网速的TextView
         netSpeedTv = (TextView) findViewById(R.id.net_speed);
+        findViewById(R.id.show_dia_fra).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ShowFragmentActivity.class));
+            }
+        });
         if (Vitamio.initialize(this)) {
             final VideoView videoView = (VideoView) findViewById(R.id.vitamio);
             videoView.setVideoURI(Uri.parse("http://video.89mc.com/89mc/knowledge/video/df366ce1-1f48-40ae-a805-6837b824c08c.mp4"));
@@ -52,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
                                 System.out.println("缓存的进度02：");
                                 percentTv.setText("当前网络不好，请查看网络！" + percent + "%");
                                 Toast.makeText(MainActivity.this, "当前网络不好，请查看网络！", Toast.LENGTH_SHORT).show();
+
+                                startActivity(new Intent(MainActivity.this, ShowFragmentActivity.class));
                                 isBuf = true;
                                 bufTime = System.currentTimeMillis();
                             } else {//还没到额定时间，缓存的进度总不变化；

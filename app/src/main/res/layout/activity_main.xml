@@ -29,4 +29,10 @@
         android:layout_toRightOf="@id/buffer_percent"
         android:textColor="#04fa00"/>
 
+    <Button
+        android:id="@+id/show_dia_fra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="弹窗"/>
 </RelativeLayout>
