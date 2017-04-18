@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
             videoView.setOnBufferingUpdateListener(new MediaPlayer.OnBufferingUpdateListener() {
                 @Override
                 public void onBufferingUpdate(MediaPlayer mp, int percent) {
+                    //如果没有网络，或者加载速度奇慢，则不显示%，只显示加载的速度
                     if (!isBuf) {//如果不缓存
                         if (bufPercent == percent) {//缓存的进度总是一样；
                             if (bufTime == 0) {
@@ -61,11 +62,12 @@ public class MainActivity extends AppCompatActivity {
                             }
                             if (System.currentTimeMillis() - bufTime > bufTimeDafult) {//在一定时间内，缓存的进度总不变化；
                                 System.out.println("缓存的进度02：");
+
                                 percentTv.setText("当前网络不好，请查看网络！" + percent + "%");
                                 Toast.makeText(MainActivity.this, "当前网络不好，请查看网络！", Toast.LENGTH_SHORT).show();
 
-                                startActivity(new Intent(MainActivity.this, ShowFragmentActivity.class));
-                                isBuf = true;
+//                                startActivity(new Intent(MainActivity.this, ShowFragmentActivity.class));
+//                                isBuf = true;
                                 bufTime = System.currentTimeMillis();
                             } else {//还没到额定时间，缓存的进度总不变化；
 //                            bufTime = System.currentTimeMillis();
@@ -77,14 +79,14 @@ public class MainActivity extends AppCompatActivity {
                             bufTime = System.currentTimeMillis();
                         }
                         ////防止下一次显示的缓存大小小于上一次的；此时就不要显示;这种情况只能发生在视频刚刚开始缓存阶段；
-                        if (bufPercent > percent){
-//                            isBuf = true;
-                        }else {
-//                            if ()
-//                            isBuf = true;
-                            percentTv.setText("已缓冲：" + percent + "%");
-                            System.out.println("已缓冲：" + percent + "%");
-                        }
+//                        if (bufPercent > percent){
+////                            isBuf = true;
+//                        }else {
+////                            if ()
+////                            isBuf = true;
+//                            percentTv.setText("已缓冲：" + percent + "%");
+//                            System.out.println("已缓冲：" + percent + "%");
+//                        }
                         System.out.println("缓存的进度06：" + "===" + bufPercent + "===" + percent);
                         bufPercent = percent;
                     }else {
