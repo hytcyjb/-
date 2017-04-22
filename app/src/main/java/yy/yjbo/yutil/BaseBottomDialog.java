@@ -59,7 +59,7 @@ public abstract class BaseBottomDialog extends DialogFragment {
         WindowManager.LayoutParams params = window.getAttributes();
 
         params.dimAmount = getDimAmount();
-        params.width = WindowManager.LayoutParams.MATCH_PARENT;
+        params.width = WindowManager.LayoutParams.MATCH_PARENT ;
         if (getHeight() > 0) {
             params.height = getHeight();
         } else {

@@ -26,14 +26,14 @@ public class EditTextDialog extends BaseBottomDialog {
     @Override
     public void bindView(View v) {
         mEditText = (EditText) v.findViewById(R.id.edit_text);
-        mEditText.post(new Runnable() {
-            @Override
-            public void run() {
-                InputMethodManager imm =
-                        (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
-                imm.showSoftInput(mEditText, 0);
-            }
-        });
+//        mEditText.post(new Runnable() {
+//            @Override
+//            public void run() {
+//                InputMethodManager imm =
+//                        (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+//                imm.showSoftInput(mEditText, 0);
+//            }
+//        });
         //监听实体键的返回键  http://www.cnblogs.com/yejiurui/p/3757493.html
         this.getDialog().setOnKeyListener(new DialogInterface.OnKeyListener()
         {
