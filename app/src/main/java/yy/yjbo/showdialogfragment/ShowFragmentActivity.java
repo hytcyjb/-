@@ -5,6 +5,8 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
 import yy.yjbo.yutil.BottomDialog;
 import yy.yjbo.R;
@@ -22,8 +24,23 @@ public class ShowFragmentActivity extends AppCompatActivity {
     private EditTextDialog dialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        //取消标题栏
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //取消状态栏
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        try {
+            //会出现空指针的状态
+            getSupportActionBar().hide();
+        } catch (Exception ex) {
+//            ex.printStackTrace();
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment_show);
+
+        shareDialog();
 
         findViewById(R.id.show_dialog).setOnClickListener(new View.OnClickListener() {
             @Override
